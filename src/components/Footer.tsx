@@ -3,6 +3,7 @@ import footerLogo from "@/assets/bradwell-logo-white.png";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa6";
 import { Fade } from "react-awesome-reveal";
+import { downloadTxtFile, createVCard } from "@/utils/vcard";
 const Footer = () => {
   return (
     <section className="bg-secondaryBlue pb-8 pt-16 text-start lg:text-center">
@@ -88,6 +89,14 @@ const Footer = () => {
                   </div>
                 </div>
               </li>
+              <div>
+                <a
+                  className="w-full rounded-md bg-primaryOrange px-8 py-2 font-medium text-white duration-100 active:translate-x-1 active:translate-y-1 md:w-auto"
+                  onClick={downloadTxtFile(createVCard())}
+                >
+                  Save Contacts
+                </a>
+              </div>
             </ul>
           </div>
 
