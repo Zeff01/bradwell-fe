@@ -114,12 +114,9 @@ const Footer = () => {
               <a href="https://www.instagram.com/bradwellcorp/" target="_blank">
                 <FaInstagram size={50} className="text-primaryOrange" />
               </a>
-              <a href="https://www.tiktok.com/@bradwellcorp">
-                <FaTiktok
-                  size={50}
-                  className="text-primaryOrange"
-                  target="_blank"
-                />
+              target="_blank"
+              <a href="https://www.tiktok.com/@bradwellcorp" target="_blank">
+                <FaTiktok size={50} className="text-primaryOrange" />
               </a>
             </ul>
           </div>
