@@ -3,8 +3,11 @@ import footerLogo from "@/assets/bradwell-logo-white.png";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa6";
 import { Fade } from "react-awesome-reveal";
-import { downloadTxtFile, createVCard } from "@/utils/vcard";
+import { downloadVCard, contact } from "@/utils/vcard";
 const Footer = () => {
+  const handleSaveContact = () => {
+    downloadVCard(contact);
+  };
   return (
     <section className="bg-secondaryBlue pb-8 pt-16 text-start lg:text-center">
       <Fade triggerOnce={true}>
@@ -90,12 +93,12 @@ const Footer = () => {
                 </div>
               </li>
               <div>
-                <a
-                  className="w-full rounded-md bg-primaryOrange px-8 py-2 font-medium text-white duration-100 active:translate-x-1 active:translate-y-1 md:w-auto"
-                  onClick={downloadTxtFile(createVCard())}
+                <button
+                  className="w-full cursor-pointer rounded-md bg-primaryOrange px-8 py-2 font-medium text-white duration-100 active:translate-x-1 active:translate-y-1 md:w-auto"
+                  onClick={handleSaveContact}
                 >
                   Save Contacts
-                </a>
+                </button>
               </div>
             </ul>
           </div>
@@ -120,7 +123,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="text-center">
+        <div className="px-4 text-center">
           <span className="mt-6 inline-block text-sm font-medium text-white lg:text-xl">
             © 2024 Bradwell Sales & Marketing Corp. All Rights Reserved.
           </span>
