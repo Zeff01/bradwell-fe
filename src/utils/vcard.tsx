@@ -12,10 +12,8 @@ export const downloadTxtFile = (vcfText: string) => {
 
 export const createVCard = () => {
   const v = new VCard();
-
   v.addCompany("Bradwell Sales & Marketing Corp.");
   v.addEmail("armand@bradwell.ph", "WORK");
-  v.addPhoneNumber("8556-2179", "WORK");
   v.addPhoneNumber("+639 966 643 2128", "WORK");
   v.addPhoneNumber("+639 992 558 5203", "WORK");
   v.addPhoneNumber("+639 977 324 0927", "WORK");
