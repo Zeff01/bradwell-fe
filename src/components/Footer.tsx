@@ -93,7 +93,7 @@ const Footer = () => {
                   </div>
                 </div>
               </li>
-              <div className="mx-auto lg:mx-0">
+              <div>
                 <button
                   className="w-full cursor-pointer rounded-md bg-primaryOrange px-8 py-2 font-medium text-white duration-100 active:translate-x-1 active:translate-y-1 md:w-auto"
                   onClick={handleSaveContact}
