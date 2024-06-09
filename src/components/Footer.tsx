@@ -3,6 +3,7 @@ import footerLogo from "@/assets/bradwell-logo-white.png";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa6";
 import { Fade } from "react-awesome-reveal";
+import codebility from "/codebility-light.svg";
 import { downloadVCard, contact } from "@/utils/vcard";
 const Footer = () => {
   const handleSaveContact = () => {
@@ -11,7 +12,7 @@ const Footer = () => {
   return (
     <section className="bg-secondaryBlue pb-8 pt-16 text-start lg:text-center">
       <Fade triggerOnce={true}>
-        <div className="container flex flex-col items-center justify-between gap-8 border-b border-gray-400 px-8 pb-16 lg:flex-row">
+        <div className="container flex flex-col items-center justify-between gap-8 border-b border-gray-400 px-8 pb-6 lg:flex-row lg:pb-16">
           <img
             src={footerLogo}
             alt="bradwell-logo"
@@ -92,7 +93,7 @@ const Footer = () => {
                   </div>
                 </div>
               </li>
-              <div>
+              <div className="mx-auto lg:mx-0">
                 <button
                   className="w-full cursor-pointer rounded-md bg-primaryOrange px-8 py-2 font-medium text-white duration-100 active:translate-x-1 active:translate-y-1 md:w-auto"
                   onClick={handleSaveContact}
@@ -121,8 +122,23 @@ const Footer = () => {
                 <FaTiktok size={50} className="text-primaryOrange" />
               </a>
             </ul>
+
+            <div className="hidden justify-center gap-2 text-white lg:mt-20 lg:flex">
+              <p className="text-xl font-bold">Powered by</p>
+              <a href="https://www.codebility.tech/" target="_blank">
+                <img src={codebility} alt="codebility logo" />
+              </a>
+            </div>
+          </div>
+
+          <div className="order-3 flex flex-col items-center justify-center gap-2 text-white lg:hidden">
+            <p className="text-base font-bold">Powered by</p>
+            <a href="https://www.codebility.tech/" target="_blank">
+              <img src={codebility} alt="codebility logo" className="w-36" />
+            </a>
           </div>
         </div>
+
         <div className="px-4 text-center">
           <span className="mt-6 inline-block text-sm font-medium text-white lg:text-xl">
             © 2024 Bradwell Sales & Marketing Corp. All Rights Reserved.
